@@ -47,11 +47,11 @@ const About: React.FC = () => {
 
   return (
     <Layout
-    title="WinnDeal Solutions"
-    description="Your page description"
-    keywords="Your keywords"
-    author="Your author"
-    canonicalUrl="https://your-website-url.com/">
+    title="WinnDeal Solutions-About"
+    description="We deliver cutting-edge IT solutions tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results"
+    keywords="Computer shop dubai, Online laptop uae, Computer shop in dubai, Buy laptop online in uae, Laptop accessories in dubai, Computer accessories in uae, Buy laptop online dubai, Laptop accessories dubai"
+    author="Muhammed Nizamudheen M"
+    canonicalUrl="https://winndeal.com/about">
       <>
       <Header />
       <section className="bg-[#f9f9f9] py-10 mt-14">

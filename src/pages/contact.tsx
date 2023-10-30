@@ -135,11 +135,11 @@ const Contact = () => {
 
   return (
     <Layout
-    title="WinnDeal Solutions"
-    description="Your page description"
-    keywords="Your keywords"
-    author="Your author"
-    canonicalUrl="https://your-website-url.com/">
+    title="WinnDeal Solutions - Ask for a Quote"
+    description="We deliver cutting-edge IT solutions tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results"
+    keywords="Computer shop dubai, Online laptop uae, Computer shop in dubai, Buy laptop online in uae, Laptop accessories in dubai, Computer accessories in uae, Buy laptop online dubai, Laptop accessories dubai,Ask for a Quote"
+    author="Muhammed Nizamudheen M"
+    canonicalUrl="https://winndeal.com/contact">
     <>
       <Header />
       <section className="py-10 bg-gray-100 text-[#282828] px-5 lg:px-20 mt-16">

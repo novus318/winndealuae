@@ -93,9 +93,35 @@ const Products = () => {
         end: () => '+=' + window.innerWidth,
       },
     });
+    const elements = document.querySelectorAll('.animate-fade-in');
+
+    elements.forEach((element: Element) => {
+      gsap.from(element, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      });
+    });
+    const iconElements = document.querySelectorAll('.animate-icon');
+    iconElements.forEach((element: Element) => {
+      element.addEventListener('mouseenter', () => {
+        gsap.to(element, { scale: 1.2, duration: 0.3 });
+      });
+      element.addEventListener('mouseleave', () => {
+        gsap.to(element, { scale: 1, duration: 0.3 });
+      });
+    });
 
     return () => {
-      to.kill();
+      ScrollTrigger.getAll().forEach((trigger) => {
+        trigger.kill(true);
+      });
     };
   }, []);
 
@@ -105,31 +131,31 @@ id="skills"
 ref={scroller}>
       <div className="overflow-hidden">
       <section className="p-6 text-center">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#282828] mb-4 sm:mb-6 tool">
+      <h2 className=" animate-fade-in text-2xl sm:text-3xl lg:text-4xl font-bold text-[#282828] mb-4 sm:mb-6 tool">
         Our Mission & Vision
       </h2>
-      <p className="text-sm sm:text-base lg:text-lg text-gray-700 px-4 lg:px-9">
+      <p className=" animate-fade-in text-sm sm:text-base lg:text-lg text-gray-700 px-4 lg:px-9">
         At Winndeal, our mission is to empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation.
         We are committed to being the leading IT service provider, recognized for our exceptional expertise, unwavering commitment to clients, and transformative impact on businesses.
       </p>
-      <div className="hidden sm:flex justify-center items-center mt-1">
-        <div className="w-12 h-12 bg-[#fd0] rounded-full text-white flex items-center justify-center text-xl sm:text-2xl">
+      <div className="hidden sm:flex animate-fade-in justify-center items-center mt-1">
+        <div className="w-12 h-12 animate-icon bg-[#fd0] rounded-full text-white flex items-center justify-center text-xl sm:text-2xl">
           <FaRocket />
         </div>
         <div className="ml-4">
           <p className="text-gray-700">We foster innovation and creative solutions to help your business stay ahead.</p>
         </div>
       </div>
-      <div className="hidden sm:flex justify-center items-center">
-        <div className="w-12 h-12 bg-[#fd0] rounded-full text-white flex items-center justify-center text-xl sm:text-2xl">
+      <div className="hidden sm:flex animate-fade-in justify-center items-center">
+        <div className="w-12 h-12 animate-icon bg-[#fd0] rounded-full text-white flex items-center justify-center text-xl sm:text-2xl">
           <FaUsers />
         </div>
         <div className="ml-4">
           <p className="text-gray-700">Our clients are at the heart of everything we do, and we go the extra mile to ensure their success.</p>
         </div>
       </div>
-      <div className="hidden sm:flex justify-center items-center">
-        <div className="w-12 h-12 bg-[#fd0] rounded-full text-white flex items-center justify-center text-xl sm:text-2xl">
+      <div className="hidden sm:flex animate-fade-in justify-center items-center">
+        <div className="w-12 h-12 animate-icon bg-[#fd0] rounded-full text-white flex items-center justify-center text-xl sm:text-2xl">
           <FaCogs />
         </div>
         <div className="ml-4">
