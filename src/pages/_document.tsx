@@ -10,10 +10,10 @@ export default function Document() {
           sizes="32x32"
           href="/title.webp"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
       <body>
         <Main />
         <NextScript />
+        <script src="https://cdn.tailwindcss.com" async/>
       </body>
     </Html>
   )
