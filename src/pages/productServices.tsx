@@ -20,7 +20,7 @@ import OS from '@/images/os.webp';
 import Consultation from '@/images/consult.webp';
 
 gsap.registerPlugin(ScrollTrigger);
-const productServices = () => {
+const ProductServices = () => {
   const serviceList = [
     {
       name: 'Network & IT AMC',
@@ -161,4 +161,4 @@ canonicalUrl="https://winndeal.com/productServices"
   );
 };
 
-export default productServices;
+export default ProductServices;
