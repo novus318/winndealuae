@@ -18,6 +18,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script src="https://cdn.tailwindcss.com" async/>
       </body>
     </Html>
   )
