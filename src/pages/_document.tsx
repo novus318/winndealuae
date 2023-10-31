@@ -19,6 +19,16 @@ export default function Document() {
         <Main />
         <NextScript />
         <script src="https://cdn.tailwindcss.com" async/>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNK665VC8Y"></script>
+<script>
+  (window as any).dataLayer = (window as any).dataLayer || [];
+  function gtag(){(window as any).dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RNK665VC8Y');
+</script>
+
       </body>
     </Html>
   )
