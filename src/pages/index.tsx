@@ -11,6 +11,7 @@ import Products from '@/Components/Products';
 
 export default function Home() {
   return (
+   <>
     <Layout
     title="WinnDeal Solutions"
     description="We deliver cutting-edge IT solutions tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results"
@@ -25,6 +26,6 @@ export default function Home() {
       <Brands />
       <Card />
       <Footer />
-    </Layout>
+    </Layout></>
   );
 }
