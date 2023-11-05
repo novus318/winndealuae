@@ -6,7 +6,6 @@ import contact from '@/images/conta.webp';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Layout from '@/Components/Layout';
-import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,7 +144,7 @@ const Contact = () => {
       <section className="py-10 bg-gray-100 text-[#282828] px-5 lg:px-20 mt-16">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <Image src={contact} alt="Illustration" className="w-full h-auto contact-image" />
+            <img src={contact.src} alt="Illustration" className="w-full h-auto contact-image" />
           </div>
 
           <div className="w-full lg:w-1/2">

@@ -11,7 +11,6 @@ import Canon from '@/images/canon.webp';
 import Qnap from '@/images/qnap.webp';
 import Samsung from '@/images/samsung.webp';
 import Synology from '@/images/synology.webp';
-import Image from 'next/image';
 
 const brandImages = [MS, Lenovo, HP, Dell, Asus, Samsung, Qnap, Synology, Canon];
 
@@ -49,8 +48,8 @@ function Brands() {
         <Slider {...settings} className="text-center">
           {brandImages.map((image, index) => (
             <div key={index} className="p-4 lg:p-12 mx-auto">
-              <Image
-                src={image}
+              <img
+                src={image.src}
                 alt={`Brand ${index}`}
                 height={48}
               />

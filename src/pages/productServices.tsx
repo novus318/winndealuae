@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Header from '@/Components/Header';
 import Footer from '@/Components/Footer';
 import Layout from '@/Components/Layout';
-import Image from 'next/image';
 import Products from '@/Components/Products';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -142,8 +141,8 @@ canonicalUrl="https://winndeal.com/productServices"
           {serviceList.map((service, index) => (
               <div key={index} className={`service-card px-4 service-card-${index}`}>
                 <div className="bg-white rounded-lg shadow-md p-6">
-                  <Image
-                    src={service.image}
+                  <img
+                    src={service.image.src}
                     alt={service.name}
                     className="w-full mx-auto mb-4 rounded-lg duration-300 hover:scale-105"
                   />

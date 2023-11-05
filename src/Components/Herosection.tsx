@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import peopleTechnology from '@/images/people-and-technology.webp';
 import receptionist from '@/images/receptionist-receiving-visitor-at-desk.webp';
 import { TypeAnimation } from 'react-type-animation';
-import Image from 'next/image';
+
 
 const images = [peopleTechnology, receptionist];
 
@@ -98,8 +98,8 @@ const Herosection = () => {
           )}
         </div>
         <div ref={imgRef} className="md:w-1/2 overflow-hidden">
-          <Image
-            src={images[imageIndex]}
+          <img
+            src={images[imageIndex].src}
             alt="Hero Image"
             className="w-full h-auto transform hover:scale-105 transition-transform duration-300 ease-in-out"
           />

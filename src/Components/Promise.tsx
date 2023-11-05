@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import sure from '@/images/Product quality-amico.webp';
 import { gsap } from 'gsap';
-import Image from 'next/image';
 
 const Promise = () => {
   const promiseRef = useRef(null);
@@ -57,8 +56,8 @@ const Promise = () => {
           </p>
         </div>
         <div className="md:w-1/3 overflow-hidden">
-          <Image
-            src={sure}
+          <img
+            src={sure.src}
             alt="Attractive Image"
             className="w-full h-auto transform hover:scale-105 transition-transform duration-300 ease-in-out"
           />

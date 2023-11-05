@@ -7,7 +7,7 @@ import Header from '@/Components/Header';
 import { FaCheckCircle, FaHandshake, FaUsers } from 'react-icons/fa';
 import AboutImage from '@/images/about.webp';
 import Layout from '@/Components/Layout';
-import Image from 'next/image';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,8 +62,8 @@ const About: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
             <div className="animate-fade-in">
-              <Image
-                src={AboutImage}
+              <img
+                src={AboutImage.src}
                 alt="About Winndeal"
                 className="w-full"
               />

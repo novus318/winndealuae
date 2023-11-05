@@ -10,7 +10,6 @@ import networkImage from '@/images/network.webp';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { FaCogs, FaRocket, FaUsers } from 'react-icons/fa';
-import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 const products = [
@@ -174,8 +173,8 @@ ref={scroller}>
         >
           <div className="flex flex-col lg:flex-row py-5">
             <div className="w-full lg:w-2/5 sm:rounded-xl lg:rounded-xl my-auto">
-              <Image
-                src={product.image}
+              <img
+                src={product.image.src}
                 alt={product.name}
                 className="w-full h-auto object-cover sm:rounded-lg lg:rounded-lg"
               />

@@ -5,7 +5,6 @@ import Bank from '@/images/transfer.webp';
 import Card from '@/images/atm-card.webp';
 import Loan from '@/images/loan.webp';
 import loopcod from '@/images/loopcod.webp';
-import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -40,10 +39,10 @@ const Footer = () => {
           <div className="space-y-2 text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">Payments Accepted</h2>
             <div className="flex gap-4 mb-4 md:mb-0 justify-center items-center px-10">
-              <Image src={COD} alt='Cash on Delivery' height={48} />
-              <Image src={Card} alt='Card' height={48} />
-              <Image src={Bank} alt='Bank Transfer' height={48} />
-              <Image src={Loan} alt='Finance Options' height={48} />
+              <img src={COD.src} alt='Cash on Delivery' height={48} />
+              <img src={Card.src} alt='Card' height={48} />
+              <img src={Bank.src} alt='Bank Transfer' height={48} />
+              <img src={Loan.src} alt='Finance Options' height={48} />
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="text-[#e8ba79] hover:text-[#f2fafd] transition-colors duration-300"
         >
-          <Image src={loopcod} alt="loopcod" className="inline ml-1" height={20} />
+          <img src={loopcod.src} alt="loopcod" className="inline ml-1" height={20} />
         </a>
       </div>
     </footer>

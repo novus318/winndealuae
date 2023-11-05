@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '@/images/logo-c.webp';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +15,8 @@ const Header = () => {
     <header className="bg-[#282828] text-white p-4 tool z-20 fixed w-full top-0">
       <div className="container mx-auto flex justify-between items-center">
         <Link href='/'>
-          <Image
-            src={logo}
+          <img
+            src={logo.src}
             alt="winndeal"
             height={65}
           />
