@@ -18,7 +18,7 @@ const Header = () => {
           <img
             src={logo.src}
             alt="winndeal"
-            height={65}
+            className='h-16'
           />
         </Link>
         <nav className={`hidden space-x-4 md:flex items-center gap-6 ${isMenuOpen ? 'hidden' : ''}`}>
