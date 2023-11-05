@@ -51,7 +51,7 @@ function Brands() {
               <img
                 src={image.src}
                 alt={`Brand ${index}`}
-                height={48}
+                className='h-12'
               />
 
             </div>
