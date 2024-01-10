@@ -15,7 +15,7 @@ export default function Document() {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/title.webp"
+          href="/title.svg"
         />
         <link
   rel="stylesheet"

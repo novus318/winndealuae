@@ -1,45 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '@/images/logo-c.webp';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import logoy from '@/images/logo-y.svg';
+import logow from '@/images/logo-w.svg';
 import Link from 'next/link';
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    gsap.set(headerRef.current, { autoAlpha: 0 });
+
+    gsap.to(headerRef.current, {
+      autoAlpha: 1,
+      duration: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: headerRef.current,
+        start: 'top 50%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const scrollThreshold = 650;
+
+      setIsScrolled(scrollPosition > scrollThreshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-[#282828] text-white p-4 tool z-20 fixed w-full top-0">
+    <header
+      ref={headerRef}
+      className={`fixed w-full top-0 transition-all duration-300 ${
+        isScrolled ? 'bg-black' : 'backdrop-blur-sm'
+      } text-white p-4 tool z-20`}
+    >
       <div className="container mx-auto flex justify-between items-center">
-        <Link href='/'>
-          <img
-            src={logo.src}
-            alt="winndeal"
-            className='h-16'
-          />
+        <Link href="/">
+          <div>
+            <img
+              src={isScrolled ? logow.src : logoy.src}
+              alt="winndeal"
+              className="h-10 p-2 md:h-16 md:p-4"
+            />
+          </div>
         </Link>
         <nav className={`hidden space-x-4 md:flex items-center gap-6 ${isMenuOpen ? 'hidden' : ''}`}>
-          <Link href="/" className="text-white hover:text-[#fd0] font-semibold tracking-wider text-lg">
+          <Link href="/" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium tracking-wider text-lg`}>
             Home
           </Link>
-          <Link href="/about" className="text-white hover:text-[#fd0] font-semibold tracking-wider text-lg">
+          <Link href="/about" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium tracking-wider text-lg`}>
             About
           </Link>
-          <Link href="/productServices" className="text-white hover:text-[#fd0] font-semibold tracking-wider text-lg">
+          <Link href="/productServices" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium tracking-wider text-lg`}>
             Product & Services
           </Link>
           <Link
             href="/contact"
-            className="text-[#282828] bg-[#fd0]  hover:text-white hover:bg-[#5a5a5a8d] font-medium rounded-full px-4 py-2"
+            className={`text-[#282828] ${isScrolled ? 'bg-[#FFEE7F]' : 'bg-[#FFEE7F]'} hover:text-white hover:bg-[#5a5a5a8d] font-medium rounded-full px-4 py-2`}
           >
             Ask for a Quote
           </Link>
         </nav>
         <button
-          className="bg-white text-black py-2 px-4 rounded-full md:hidden"
+          className={`py-2 px-4 rounded-full md:hidden ${isScrolled ? 'bg-white text-black' : 'bg-[#FFEE7F] text-black'}`}
           onClick={toggleMenu}
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -47,18 +90,18 @@ const Header = () => {
       </div>
       {isMenuOpen && (
         <nav className="md:hidden mt-2 p-2">
-          <Link href="/" className="text-white hover:text-[#fd0] font-medium block mb-2">
+          <Link href="/" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium block mb-2`}>
             Home
           </Link>
-          <Link href="/about" className="text-white hover:text-[#fd0] font-medium block mb-2">
+          <Link href="/about" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium block mb-2`}>
             About
           </Link>
-          <Link href="/productServices" className="text-white hover:text-[#fd0] font-medium block mb-2">
+          <Link href="/productServices" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium block mb-2`}>
             Product & Services
           </Link>
           <Link
             href="/contact"
-            className="text-[#282828] bg-[#fd0] hover:text-white hover-bg-[#5a5a5a8d] font-medium block mb-2 rounded-full px-4 py-2"
+            className={`text-[#282828] ${isScrolled ? 'bg-[#FFEE7F]' : 'bg-[#FFEE7F]'} hover:text-white hover:bg-[#5a5a5a8d] font-medium block mb-2 rounded-full px-4 py-2`}
           >
             Ask for a Quote
           </Link>
