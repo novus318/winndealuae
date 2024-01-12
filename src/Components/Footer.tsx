@@ -5,13 +5,18 @@ import Bank from '@/images/transfer.webp';
 import Card from '@/images/atm-card.webp';
 import Loan from '@/images/loan.webp';
 import loopcod from '@/images/loopcod.webp';
+import logoy from '@/images/logo-y.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#282828] text-white py-8">
+    <footer className=" bg-[#ffffff20] rounded-t-[5rem] text-white py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className='text-center'>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#fd0] tool tracking-wider">WINNDEAL</h1>
+        <img
+              src={logoy.src}
+              alt="winndeal"
+              className="h-10 p-2 md:h-16 md:p-4 m-auto"
+            />
           <p className="text-sm sm:text-lg md:text-base">
             We deliver cutting-edge IT solutions tailored to your business needs in UAE. Our team of experts is committed to providing top-notch services that drive results.
           </p>
@@ -46,17 +51,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mt-6 text-center text-[#f2fafd] text-xs sm:text-sm md:text-base">
-        &copy; {new Date().getFullYear()} Developed and designed by{' '}
-        <a
-          href="https://www.nizamudheen.tech/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#e8ba79] hover:text-[#f2fafd] transition-colors duration-300"
-        >
-          <img src={loopcod.src} alt="loopcod" className="inline ml-1 h-5" />
-        </a>
       </div>
     </footer>
   );

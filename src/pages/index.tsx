@@ -7,6 +7,8 @@ import Header from '@/Components/Header';
 import Herosection from '@/Components/Herosection';
 import Promise from '@/Components/Promise';
 import Products from '@/Components/Products';
+import Mission from '@/Components/Mission';
+import Services from '@/Components/Services';
 
 
 export default function Home() {
@@ -22,7 +24,8 @@ export default function Home() {
       <Header />
       <Herosection /> 
       <Promise />
-      <Products/>
+      <Mission/>
+      <Services/>
       <Brands />
       <Card />
       <Footer />

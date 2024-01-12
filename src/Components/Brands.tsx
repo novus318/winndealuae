@@ -23,6 +23,7 @@ function Brands() {
     autoplaySpeed: 2000,
     slidesToShow: 5,
     slidesToScroll: 1,
+    arrows:false,
     responsive: [
       {
         breakpoint: 1024,
@@ -40,9 +41,9 @@ function Brands() {
   };
 
   return (
-    <div className="bg-gray-100 py-10 overflow-hidden">
+    <div className="py-10 overflow-hidden">
       <div className="container mx-auto text-center">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282828] mb-8 tool">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffffff] mb-8 tool">
           Brands We Boost
         </h1>
         <Slider {...settings} className="text-center">
@@ -51,7 +52,7 @@ function Brands() {
               <img
                 src={image.src}
                 alt={`Brand ${index}`}
-                className='h-12'
+                className='h-12 filter grayscale invert brightness-125'
               />
 
             </div>
