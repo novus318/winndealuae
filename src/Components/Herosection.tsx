@@ -76,10 +76,10 @@ const Herosection = () => {
   }, [learnMoreClicked]);
 
   return (
-    <div className="herosection">
-      <Carousel showArrows={false} showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={5000}>
+    <div className="herosection z-50">
+      <Carousel showArrows={false} showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={5000} swipeable={false}>
         {sliders.map((slider, index) => (
-          <div key={index} className="relative h-screen overflow-hidden">
+          <div key={index} className="relative h-screen overflow-x-hidden">
             {slider.video && (
               <video autoPlay loop muted className="object-cover w-full h-full">
                 <source src={slider.video} type="video/mp4" />

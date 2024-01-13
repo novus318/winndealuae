@@ -8,6 +8,7 @@ import Products from '@/Components/Products';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Services from '@/Components/Services';
+import Brands from '@/Components/Brands';
 
 gsap.registerPlugin(ScrollTrigger);
 const ProductServices = () => {
@@ -24,6 +25,7 @@ canonicalUrl="https://winndeal.com/productServices"
     >
       <Header />
      <Services/>
+     <Brands/>
       <Products />
       <Footer />
     </Layout>

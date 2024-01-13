@@ -4,7 +4,6 @@ import COD from '@/images/cash-on-delivery.webp';
 import Bank from '@/images/transfer.webp';
 import Card from '@/images/atm-card.webp';
 import Loan from '@/images/loan.webp';
-import loopcod from '@/images/loopcod.webp';
 import logoy from '@/images/logo-y.svg';
 
 const Footer = () => {

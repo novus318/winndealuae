@@ -54,9 +54,9 @@ const About: React.FC = () => {
     canonicalUrl="https://winndeal.com/about">
       <>
       <Header />
-      <section className="bg-[#f9f9f9] py-10 mt-14">
-        <div className="container mx-auto p-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-[#282828] mb-4 md:mb-8 text-center animate-fade-in">
+      <section className="py-10 mt-14">
+        <div className="container mx-auto p-8 apple">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white mb-4 md:mb-8 text-center animate-fade-in">
             About Us
           </h1>
 
@@ -65,14 +65,14 @@ const About: React.FC = () => {
               <img
                 src={AboutImage.src}
                 alt="About Winndeal"
-                className="w-full"
+                className="w-full filter grayscale-[50%]"
               />
             </div>
             <div className="animate-fade-in">
-              <p className="text-base md:text-lg lg:text-xl font-semibold text-[#282828] mb-2 md:mb-4">
+              <p className="text-base md:text-lg lg:text-xl font-semibold text-white mb-2 md:mb-4">
                 Welcome to Winndeal - Your Trusted IT Solutions Provider in the UAE
               </p>
-              <p className="main text-sm md:text-base lg:text-lg font-medium text-gray-600 mb-2 md:mb-4 animate-fade-in">
+              <p className="main text-sm md:text-base lg:text-lg font-medium text-white mb-2 md:mb-4 animate-fade-in">
                 At Winndeal, we take pride in being your trusted partner for all
                 things IT in the United Arab Emirates (UAE). With a solid
                 foundation built on expertise, innovation, and a deep
@@ -80,10 +80,10 @@ const About: React.FC = () => {
                 thrive in one of the most dynamic and competitive markets in the
                 world.
               </p>
-              <p className="text-base md:text-lg lg:text-xl font-semibold text-[#282828] mb-2 md:mb-4">
+              <p className="text-base md:text-lg lg:text-xl font-semibold text-white mb-2 md:mb-4">
                 Our Vision
               </p>
-              <p className="text-sm md:text-base lg:text-lg font-medium text-gray-600 mb-2 md:mb-4 animate-fade-in">
+              <p className="text-sm md:text-base lg:text-lg font-medium text-white mb-2 md:mb-4 animate-fade-in">
                 Our vision is clear - to make technology accessible, reliable,
                 and secure for everyone in the UAE. We understand the unique
                 challenges and opportunities presented by this region, and we are
@@ -94,16 +94,16 @@ const About: React.FC = () => {
           </div>
 
           <div className="my-8 md:my-12">
-            <h2 className="text-base md:text-lg lg:text-xl font-extrabold text-[#282828] mb-2 md:mb-4 text-center animate-fade-in">
+            <h2 className="text-base md:text-lg lg:text-xl font-extrabold text-white mb-2 md:mb-4 text-center animate-fade-in">
               Our Advantages
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <div className="p-3 md:p-5 quality border rounded-lg shadow-md text-center animate-fade-in">
                 <FaCheckCircle
-                  className="text-2xl md:text-4xl lg:text-5xl text-[#fd0] mb-1 md:mb-2 mx-auto animate-icon"
+                  className="text-2xl md:text-4xl lg:text-5xl text-[#FFEE7F] mb-1 md:mb-2 mx-auto animate-icon"
                 />
                 <h3 className="text-base md:text-lg lg:text-xl font-semibold">Expertise</h3>
-                <p className="text-sm md:text-base lg:text-lg text-gray-600 py-2 md:py-3">
+                <p className="text-sm md:text-base lg:text-lg text-white py-2 md:py-3">
                   Our team of seasoned professionals possesses an in-depth understanding
                   of the IT requirements specific to the UAE, and we combine this
                   expertise with a customer-centric approach to provide tailored solutions
@@ -113,23 +113,21 @@ const About: React.FC = () => {
               </div>
               <div className="p-3 md:p-5 quality border rounded-lg shadow-md text-center animate-fade-in">
                 <FaUsers
-                  className="text-2xl md:text-4xl lg:text-5xl text-[#fd0] mb-1 md:mb-2 mx-auto animate-icon"
+                  className="text-2xl md:text-4xl lg:text-5xl text-[#FFEE7F] mb-1 md:mb-2 mx-auto animate-icon"
                 />
                 <h3 className="text-base md:text-lg lg:text-xl font-semibold">Quality Service</h3>
-                <p className="text-sm md:text-base lg:text-lg text-gray-600 py-2 md:py-3">
-                  Whether you need network and IT AMC, installation and setup, security
-                  solutions, maintenance and support, remote assist services, network
-                  security audits, OS configuration, or expert IT consultation, our
+                <p className="text-sm md:text-base lg:text-lg text-white py-2 md:py-3">
+                we offer web development and digital marketing services to further enhance your online presence and business success. or expert IT consultation, our
                   commitment to excellence remains unwavering. We work diligently to ensure
                   your IT infrastructure operates seamlessly and efficiently.
                 </p>
               </div>
               <div className="p-3 md:p-5 quality border rounded-lg shadow-md text-center animate-fade-in">
                 <FaHandshake
-                  className="text-2xl md:text-4xl lg:text-5xl text-[#fd0] mb-1 md:mb-2 mx-auto animate-icon"
+                  className="text-2xl md:text-4xl lg:text-5xl text-[#FFEE7F] mb-1 md:mb-2 mx-auto animate-icon"
                 />
                 <h3 className="text-base md:text-lg lg:text-xl font-semibold">Local Support</h3>
-                <p className="text-sm md:text-base lg:text-lg text-gray-600 py-2 md:py-3">
+                <p className="text-sm md:text-base lg:text-lg text-white py-2 md:py-3">
                   Our presence in the UAE ensures that you receive prompt, localized
                   support. We understand the importance of being there when you need us,
                   and we are always ready to assist you with expert advice and support
@@ -140,18 +138,18 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <p className="text-sm md:text-base lg:text-lg commu font-medium text-gray-600 mb-4 md:mb-8 text-center animate-fade-in">
-            <span className='text-[#282828]'>Community Engagement:</span> Winndeal is not just a technology provider;
+          <p className="text-sm md:text-base lg:text-lg commu font-medium text-white mb-4 md:mb-8 text-center animate-fade-in">
+            <span className='text-white'>Community Engagement:</span> Winndeal is not just a technology provider;
             we are an active part of the UAE community. We believe in giving
             back and contributing to the growth and development of this
             remarkable nation.
           </p>
 
           <div className="animate-fade-in">
-            <h2 className="text-base md:text-lg lg:text-xl join font-extrabold text-[#282828] mb-2 md:mb-4 text-center">
+            <h2 className="text-base md:text-lg lg:text-xl join font-extrabold text-white mb-2 md:mb-4 text-center">
               Join Us in the Digital Journey
             </h2>
-            <p className="text-sm md:text-base lg:text-lg text-gray-600 text-center">
+            <p className="text-sm md:text-base lg:text-lg text-white text-center">
               Thank you for choosing Winndeal as your IT partner in the UAE.
               Together, we will navigate the ever-evolving world of technology and
               create a smarter and more secure future right here in the UAE.

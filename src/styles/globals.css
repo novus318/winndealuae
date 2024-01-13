@@ -32,3 +32,7 @@ textarea:focus {
 .hollow-text {
   text-shadow: 0 0 2px #FFEE7F;
 }
+.hallow {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFEE7F;
+}

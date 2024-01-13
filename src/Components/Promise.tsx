@@ -77,7 +77,7 @@ const Promise = () => {
   return (
     <div
       ref={promiseRef}
-      className={`bg-[#FFf] py-16 px-4 md:px-8 text-black relative transition-transform duration-500 rounded-b-[5em] mx-4 mb-5 ${
+      className={`bg-[#fffffff6] py-16 px-4 md:px-8 text-black relative transition-transform duration-500 rounded-b-[5em] mx-4 mb-5 ${
         animate ? 'transform translate-y-0 opacity-100' : 'transform translate-y-12 opacity-0'
       }`}
     >

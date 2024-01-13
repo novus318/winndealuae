@@ -143,7 +143,7 @@ const Contact = () => {
       canonicalUrl="https://winndeal.com/contact">
       <>
         <Header />
-        <section className="py-10 bg-gray-100 text-[#282828] px-5 lg:px-20 mt-16">
+        <section className="py-10 text-white px-5 lg:px-20 mt-16">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <img src={contact.src} alt="Illustration" className="w-full h-auto contact-image" />
@@ -151,7 +151,7 @@ const Contact = () => {
 
             <div className="w-full lg:w-1/2">
               <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-center">Contact Us</h2>
-              <form onSubmit={handleSubmit} className="bg-[#282828] p-4 form-element lg:p-6 rounded-lg shadow-lg">
+              <form onSubmit={handleSubmit} className="bg-wtext-white p-4 form-element lg:p-6 rounded-lg shadow-lg">
                 <div className="mb-6 mt-2">
                   <input
                     type="text"
@@ -203,7 +203,7 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        <section className="bg-gray-100 text-[#282828] py-6 px-5 lg:px-20">
+        <section className="bg-gray-100 text-white py-6 px-5 lg:px-20">
           <div className="container conte mx-auto">
             <h2 className="text-xl lg:text-2xl font-bold mb-3 text-center">We would Love to Hear from You</h2>
             <p className="text-sm lg:text-base text-center lg:text-center text-gray-600">

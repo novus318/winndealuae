@@ -9,6 +9,8 @@ import Promise from '@/Components/Promise';
 import Products from '@/Components/Products';
 import Mission from '@/Components/Mission';
 import Services from '@/Components/Services';
+import Highlights from '@/Components/Highlights';
+import Highlight2 from '@/Components/Highlight2';
 
 
 export default function Home() {
@@ -25,8 +27,9 @@ export default function Home() {
       <Herosection /> 
       <Promise />
       <Mission/>
+      <Highlights/>
       <Services/>
-      <Brands />
+      <Highlight2/>
       <Card />
       <Footer />
     </Layout></>
