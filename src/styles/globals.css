@@ -36,3 +36,9 @@ textarea:focus {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #FFEE7F;
 }
+span.dail-code{
+  color: white !important;
+}
+.country{
+  background: rgba(0, 0, 0, 0.92) !important;
+}
