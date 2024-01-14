@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@/Components/Layout';
 import Brands from '@/Components/Brands';
 import Card from '@/Components/Card';
@@ -6,7 +6,6 @@ import Footer from '@/Components/Footer';
 import Header from '@/Components/Header';
 import Herosection from '@/Components/Herosection';
 import Promise from '@/Components/Promise';
-import Products from '@/Components/Products';
 import Mission from '@/Components/Mission';
 import Services from '@/Components/Services';
 import Highlights from '@/Components/Highlights';
@@ -14,6 +13,18 @@ import Highlight2 from '@/Components/Highlight2';
 
 
 export default function Home() {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('ServiceWorker registration successful with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.error('ServiceWorker registration failed:', error);
+        });
+    }
+  }, []);
+
   return (
    <>
     <Layout
