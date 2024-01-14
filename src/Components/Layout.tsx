@@ -5,6 +5,7 @@ import ContactIcons from './ContactIcons';
 interface LayoutProps {
   children: React.ReactNode;
   title: string;
+  image:string;
   description: string;
   keywords: string;
   author: string;
@@ -16,6 +17,7 @@ const Layout: React.FC<LayoutProps> = ({
   title,
   description,
   keywords,
+  image,
   author,
   canonicalUrl,
 }) => {
@@ -36,6 +38,18 @@ const Layout: React.FC<LayoutProps> = ({
           }`}
         </script>
         <link rel="canonical" href={canonicalUrl} />
+           
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={escapedCanonicalUrl} />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content={image} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:creator" content={author} />
         <title>{title}</title>
       </Helmet>
       {children}
@@ -46,12 +60,13 @@ const Layout: React.FC<LayoutProps> = ({
 };
 
 Layout.defaultProps = {
-  title: 'WinnDeal Solutions',
+  title: 'WinnDeal IT Solutions',
   description:
-    'We deliver cutting-edge IT solutions tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results',
+    'We deliver cutting-edge IT solutions and Web Developments tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results',
   keywords:
-    'WinnDeal,windeal,winndeal,it consulting,IT consulting,javacsript,IT solution,IT company,UAE,uae,Dubai,dubai,IT support companies,IT services near me,IT services company,IT firm,IT solutions company,IT company website,it solutions,muhammed nizamudheen m,nizamudheen,Muhammed Nizamudheen M,Nizamudheen,Winndeal UAE,Laptop & desktop suppliers in Dubai,Computer accessories suppliers in UAE,computer hardware suppliers in dubai,managed IT solutions,best it consulting firms,Dubai based IT service providers,IT AMC Service provider,IT remote assistants',
+    'WinnDeal,windeal,winndeal,it consulting,IT consulting,javacsript,IT solutions,IT company,UAE,uae,Dubai,dubai,IT support companies,IT services near me,IT services company,IT firm,IT solutions company,IT company website,it solutions,muhammed nizamudheen m,nizamudheen,Muhammed Nizamudheen M,Nizamudheen,Winndeal UAE,Laptop & desktop suppliers in Dubai,Computer accessories suppliers in UAE,computer hardware suppliers in dubai,managed IT solutions,best it consulting firms,Dubai based IT service providers,IT AMC Service provider,IT remote assistants',
   author: 'Muhammed Nizamudheen M',
+  image:'https://winndeal.com/ogimage.png',
   canonicalUrl: 'https://winndeal.com/',
 };
 
