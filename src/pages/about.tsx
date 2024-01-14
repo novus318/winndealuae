@@ -65,7 +65,7 @@ const About: React.FC = () => {
               <img
                 src={AboutImage.src}
                 alt="About Winndeal"
-                className="w-full filter grayscale-[50%]"
+                className="w-full filter grayscale-[30%] "
               />
             </div>
             <div className="animate-fade-in">

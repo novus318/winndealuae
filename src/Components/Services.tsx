@@ -120,7 +120,7 @@ const Services = () => {
   return (
     <section className="py-10">
     <div className="container mx-auto p-8">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white mb-4 md:mb-10 text-center animate-fade-in">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white mb-4 md:mb-10 text-center animate-fade-in md:mt-5">
         Our Services
       </h1>
 
