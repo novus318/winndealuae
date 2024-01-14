@@ -81,7 +81,7 @@ const Herosection = () => {
         {sliders.map((slider, index) => (
           <div key={index} className="relative h-screen overflow-x-hidden">
             {slider.video && (
-              <video autoPlay loop muted className="object-cover w-full h-full">
+             <video autoPlay loop muted controls={false} playsInline className="object-cover w-full h-full">
                 <source src={slider.video} type="video/mp4" />
               </video>
             )}
