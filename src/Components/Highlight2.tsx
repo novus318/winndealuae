@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import gaming from '@/images/banner/gamming.webp';
+import gaming from '../../public/banner/gamming.webp';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import laptopMockup from '@/images/banner/laptop.webp';
+import laptopMockup from '../../public/banner/laptop.webp';
 gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {

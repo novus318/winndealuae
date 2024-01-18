@@ -133,7 +133,7 @@ const Services = () => {
                 alt={service.name}
                 className="w-full h-56 mx-auto mb-4 filter grayscale  rounded-2xl duration-300 hover:scale-105"
               />
-              <h3 className="text-xl font-semibold text-[#FFEE7F]">{service.name}</h3>
+              <h1 className="text-xl font-semibold text-[#FFEE7F]">{service.name}</h1>
               <p className="text-base text-white text-left">{service.description}</p>
             </div>
           </div>

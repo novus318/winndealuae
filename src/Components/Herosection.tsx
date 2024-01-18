@@ -1,8 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+'use client'
+import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+const LazyVideo = lazy(() => import('./Lazyvideo'));
+
 gsap.registerPlugin(ScrollTrigger);
 const Herosection = () => {
   const contentRef = useRef(null);
@@ -48,7 +52,7 @@ const Herosection = () => {
   useEffect(() => {
     gsap.from('.animate-text', {
       y: -100,
-      duration: 1.5,
+      duration: 1,
       opacity: 0,
       stagger: 0.1,
       scrollTrigger: { trigger: '.herosection', start: 'top 80%' },
@@ -56,7 +60,7 @@ const Herosection = () => {
 
     gsap.from('.animate-textb', {
       y: 60,
-      duration: 1.5,
+      duration: 1,
       opacity: 0,
       stagger: 0.1,
       scrollTrigger: { trigger: '.herosection', start: 'top 80%' },
@@ -80,14 +84,14 @@ const Herosection = () => {
       <Carousel showArrows={false} showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={5000} swipeable={false}>
         {sliders.map((slider, index) => (
           <div key={index} className="relative h-screen overflow-x-hidden">
-            {slider.video && (
-             <video autoPlay loop muted controls={false} playsInline className="object-cover w-full h-full">
-                <source src={slider.video} type="video/mp4" />
-              </video>
+                   {slider.video && (
+                <Suspense fallback={<div>Loading...</div>}>
+                  <LazyVideo src={slider.video} />
+                </Suspense>
             )}
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 text-center">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-4 animate-text">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-text">
                 <span className="hollow-text text-shadow">{slider.main}</span>
               </h1>
               <h2 className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold mb-4 netflix animate-textb">

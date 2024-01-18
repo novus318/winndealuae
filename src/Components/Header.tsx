@@ -161,6 +161,7 @@ const Header = () => {
         </nav>
         <button
           className={`py-2 px-4 rounded-full md:hidden ${isScrolled ? 'bg-white text-black' : 'bg-[#FFEE7F] text-black'}`}
+          name='toggle'
           onClick={toggleMenu}
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}

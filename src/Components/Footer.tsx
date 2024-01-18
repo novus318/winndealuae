@@ -23,20 +23,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-4">
           <div className="space-y-2">
             <p>Phone: +971 4 398 5048</p>
-            <p>Email: <a href="mailto:support@winndeal.com" className="text-[#fd0]">support@winndeal.com</a></p>
-            <p>Office -<a href="https://goo.gl/maps/Ja7wtrVrpMZC6xHi6" className="text-[#fd0]"> B19-190, Block B SRTI Park, Sharjah - United Arab Emirates </a></p>
+            <p>Email: <a href="mailto:support@winndeal.com" className="text-[#FFEE7F]">support@winndeal.com</a></p>
+            <p>Office -<a href="https://goo.gl/maps/Ja7wtrVrpMZC6xHi6" className="text-[#FFEE7F]"> B19-190, Block B SRTI Park, Sharjah - United Arab Emirates </a></p>
           </div>
           <div className="text-3xl sm:text-4xl gap-4 flex mb-4 md:mb-0 justify-center items-center">
-            <a href="https://wa.me/+971563017029" target="_blank" rel="noopener noreferrer" className="hover:text-[#fd0]">
+            <a href="https://wa.me/+971563017029" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
               <FaWhatsapp />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100093622394715" target="_blank" rel="noopener noreferrer" className="hover:text-[#fd0]">
+            <a href="https://www.facebook.com/profile.php?id=100093622394715" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
               <FaFacebook />
             </a>
-            <a href="https://www.linkedin.com/company/winndeal/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-[#fd0]">
+            <a href="https://www.linkedin.com/company/winndeal/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
               <FaLinkedin />
             </a>
-            <a href="https://instagram.com/winn.deal?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer" className="hover:text-[#fd0]">
+            <a href="https://instagram.com/winn.deal?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
               <FaInstagram />
             </a>
           </div>

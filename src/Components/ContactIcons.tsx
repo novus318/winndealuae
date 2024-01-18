@@ -18,6 +18,7 @@ const ContactIcons = () => {
           <a
             href="https://www.linkedin.com/company/winndeal/about/?viewAsMember=true"
             target="_blank"
+
             rel="noopener noreferrer"
             className="hover:text-white text-black"
           >
