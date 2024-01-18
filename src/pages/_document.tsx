@@ -17,11 +17,12 @@ export default function Document() {
           sizes="32x32"
           href="/title.svg"
         />
+  
 
       <body>
         <Main />
         <NextScript />
-      
+     
       </body>
     </Html>
   )
