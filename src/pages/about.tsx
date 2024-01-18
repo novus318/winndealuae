@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import Footer from '@/Components/Footer';
+import Header from '@/Components/Header';
 import { FaCheckCircle, FaHandshake, FaUsers } from 'react-icons/fa';
 import AboutImage from '@/images/about.webp';
-import Layout from '@/components/Layout';
+import Layout from '@/Components/Layout';
 
 
 gsap.registerPlugin(ScrollTrigger);
