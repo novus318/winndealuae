@@ -33,6 +33,11 @@ const Promise = () => {
         );
       }
     };
+    ScrollTrigger.create({
+      trigger: promiseElement,
+      start: 'top 80%',
+      onEnter: () => handleScroll(),
+    });
 
     ScrollTrigger.create({
       trigger: textElement,
