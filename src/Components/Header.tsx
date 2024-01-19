@@ -134,20 +134,20 @@ const Header = () => {
         <Link href="/">
           <div>
             <img
-              src={isScrolled ? logow.src : logoy.src}
+              src={isScrolled ? logoy.src : logow.src}
               alt="winndeal"
               className="h-10 p-2 md:h-16 md:p-4"
             />
           </div>
         </Link>
         <nav className={`hidden space-x-4 md:flex items-center gap-6 ${isMenuOpen ? 'hidden' : ''}`}>
-          <Link href="/" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium tracking-wider text-lg`}>
+          <Link href="/" className={`${isScrolled ? 'text-[#FFEE7F]' : 'text-white'} hover:text-white font-medium tracking-wider text-lg`}>
             Home
           </Link>
-          <Link href="/about" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium tracking-wider text-lg`}>
+          <Link href="/about" className={`${isScrolled ? 'text-[#FFEE7F]' : 'text-white'} hover:text-white font-medium tracking-wider text-lg`}>
             About
           </Link>
-          <Link href="/productServices" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium tracking-wider text-lg`}>
+          <Link href="/productServices" className={`${isScrolled ? 'text-[#FFEE7F]' : 'text-white'} hover:text-white font-medium tracking-wider text-lg`}>
             Product & Services
           </Link>
           <button
@@ -169,13 +169,13 @@ const Header = () => {
       </div>
       {isMenuOpen && (
         <nav className="md:hidden mt-2 p-2">
-          <Link href="/" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium block mb-2`}>
+          <Link href="/" className={`${isScrolled ? 'text-[#FFEE7F]' : 'text-white'} hover:text-[#FFEE7F] font-medium block mb-2`}>
             Home
           </Link>
-          <Link href="/about" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium block mb-2`}>
+          <Link href="/about" className={`${isScrolled ? 'text-[#FFEE7F]' : 'text-white'} hover:text-[#FFEE7F] font-medium block mb-2`}>
             About
           </Link>
-          <Link href="/productServices" className={`${isScrolled ? 'text-white' : 'text-[#FFEE7F]'} hover:text-[#fd0] font-medium block mb-2`}>
+          <Link href="/productServices" className={`${isScrolled ? 'text-[#FFEE7F]' : 'text-white'} hover:text-[#FFEE7F] font-medium block mb-2`}>
             Product & Services
           </Link>
           <button
