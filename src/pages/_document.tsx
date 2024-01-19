@@ -12,9 +12,9 @@ export default function Document() {
           />
           <meta property="og:title" content="WinnDeal IT Solutions and Web development" />
         <meta property="og:description" content="We deliver cutting-edge IT solutions and Web Developments tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results" />
-        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image" content="https://www.winndeal.com/ogimage.png" />
         <meta property="og:url" content="https://www.winndeal.com/" />
-        <meta name="twitter:card" content="/ogimage.png" />
+        <meta name="twitter:card" content="https://www.winndeal.com/ogimage.png" />
       </Head>
       <link
           rel="icon"
