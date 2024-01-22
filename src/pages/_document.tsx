@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
-          <script
+      <script defer async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
+          <script defer
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gtag.GA_TRACKING_ID}');`,
             }}
@@ -22,7 +22,6 @@ export default function Document() {
           sizes="32x32"
           href="/title.svg"
         />
-  
 
       <body>
         <Main />
