@@ -22,15 +22,12 @@ export default function Document() {
           sizes="32x32"
           href="/title.svg"
         />
-        <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-/>
+  
 
       <body>
         <Main />
         <NextScript />
-        <script src="https://cdn.tailwindcss.com" async/>
+
       </body>
     </Html>
   )
