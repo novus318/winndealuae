@@ -48,8 +48,8 @@ const About: React.FC = () => {
   return (
     <Layout
     image='https://winndeal.com/ogimage.png'
-    title="WinnDeal Solutions-About"
-    description="We deliver cutting-edge IT solutions and Web Development tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results"
+    title="Our Story, Mission, and Team | WINNDEAL in UAE"
+    description="Explore the journey, mission, and team behind WINNDEAL in UAE. Join us on the path of innovation and commitment to excellence"
     keywords="Computer shop dubai, Online laptop uae, Computer shop in dubai, Buy laptop online in uae, Laptop accessories in dubai, Computer accessories in uae, Buy laptop online dubai, Laptop accessories dubai,web application development,uae,Dubai,abu dhabi,sharjah,Muhammed Nizamudheen m,web developer,web development,software,software engineer,web design,website design,website builder,web designer,ecommerce website,website creator,responsive web design,web development company,best website,web design software,build a website,web developer salary,design website,website layout,web application development,JavaScript,Node.js,Full-Stack Development,Git,Front-end Development,Back-End Web Development,freelance web designer dubai,seo freelancers in dubai,freelance web designer in dubai,hire freelancer website designer dubaifreelance web design dubai,freelance seo dubai,logo designer dubai,web developer dubai,web design company in dubai,seo company in dubai,web design,web design company,freelance web designer,web development in dubai,web developer in uae,freelance web design,seo dubai,seo service,seo freelancers,seo company,seo,seo dubai,winndeal dubai,software developer in uae"
     author="Muhammed Nizamudheen M"
     canonicalUrl="https://winndeal.com/about">
