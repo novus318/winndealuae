@@ -17,7 +17,7 @@ const Footer = () => {
               className="h-10 p-2 md:h-16 md:p-4 m-auto"
             />
           <p className="text-sm sm:text-lg md:text-base">
-            We deliver cutting-edge IT solutions tailored to your business needs in UAE. Our team of experts is committed to providing top-notch services that drive results.
+          We deliver cutting-edge IT solutions and Web Developments tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-4">
