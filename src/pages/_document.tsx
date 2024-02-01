@@ -10,6 +10,13 @@ export default function Document() {
               __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gtag.GA_TRACKING_ID}');`,
             }}
           />
+            <script defer async src={'https://www.googletagmanager.com/gtag/js?id=AW-11289254960'} />
+          <script defer
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11289254960');`,
+            }}
+          />
+   
           <meta property="og:title" content="WinnDeal - The Best IT Solutions and Web Development in UAE" />
         <meta property="og:description" content="We deliver cutting-edge IT solutions and Web Developments tailored to your business needs in UAE, Our team of experts is committed to providing top-notch services that drive results" />
         <meta property="og:image" content="https://www.winndeal.com/ogimage.png" />
