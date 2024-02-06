@@ -1,3 +1,4 @@
+import Layout from '@/Components/acc/Layout';
 import React, { useState } from 'react';
 
 const Login = () => {
@@ -10,6 +11,10 @@ const Login = () => {
   };
 
   return (
+    <Layout
+
+    title="WINNDEAL | Accounts"
+ >
     <div className="flex items-center justify-center h-screen bg-black text-white">
       <div className="bg-white p-8 rounded shadow-md w-96">
         <h2 className="text-3xl font-bold mb-6 text-black">Login to Accounts</h2>
@@ -39,6 +44,7 @@ const Login = () => {
         </button>
       </div>
     </div>
+    </Layout>
   );
 };
 

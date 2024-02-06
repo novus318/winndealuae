@@ -1,9 +1,13 @@
+import Layout from '@/Components/acc/Layout'
 import Sidebar from '@/Components/acc/SideBar'
 import React from 'react'
 
 const NewSalesInvoice = () => {
   return (
     <>
+       <Layout
+    title="WINNDEAL | Accounts"
+   >
    <div className="flex">
       <Sidebar />
       <div className="w-5/6 p-4 bg-white">
@@ -11,6 +15,7 @@ const NewSalesInvoice = () => {
         <div>Main Content</div>
       </div>
     </div>
+    </Layout>
       </>
   )
 }

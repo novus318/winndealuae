@@ -1,9 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import * as gtag from '@/gtag.mjs';
 export default function Document() {
+  const shouldNoIndex = process.browser && window.location.pathname.startsWith('/accounts');
   return (
     <Html lang="en">
       <Head>
+      {shouldNoIndex && <meta name="robots" content="noindex" />}
       <script defer async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
           <script defer
             dangerouslySetInnerHTML={{
