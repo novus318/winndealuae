@@ -1,4 +1,4 @@
-import Sidebar from '../components/SideBar'
+import Sidebar from '@/Components/acc/SideBar'
 import React from 'react'
 
 const Customers = () => {
@@ -6,7 +6,7 @@ const Customers = () => {
     <>
    <div className="flex">
       <Sidebar />
-      <div className="w-5/6 p-4">
+      <div className="w-5/6 p-4 bg-white">
         <h1>Customers</h1>
         <div>Main Content</div>
       </div>

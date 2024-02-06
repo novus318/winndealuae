@@ -1,4 +1,3 @@
-// Sidebar.tsx
 
 import React from 'react';
 import Link from 'next/link';
@@ -14,7 +13,7 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className="bg-black text-white h-screen w-1/6 p-4">
-            <Link href="/accounts">
+            <Link href="/accounts/dashboard">
       <div className="flex px-4 py-2 mb-2">
         <img
           src="https://www.winndeal.com/_next/static/media/logo-w.0662c99e.svg"
@@ -25,32 +24,32 @@ const Sidebar: React.FC = () => {
       </Link>
       <ul>
         <li className="mb-4 transition duration-300 ease-in-out transform hover:scale-105">
-          <Link href="/accounts">
-            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/') && 'text-black bg-white'}`}>
+          <Link href="/accounts/dashboard">
+            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/accounts/dashboard') && 'text-black bg-white'}`}>
               <FaHome className="mr-3" />
               <span className="text-lg">Dashboard</span>
             </div>
           </Link>
         </li>
         <li className="mb-4 transition duration-300 ease-in-out transform hover:scale-105">
-          <Link href="/new-quote">
-            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/new-quote') && 'text-black bg-white'}`}>
+          <Link href="/accounts/new-quote">
+            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/accounts/new-quote') && 'text-black bg-white'}`}>
               <FaFileAlt className="mr-3" />
               <span className="text-lg">New Quote</span>
             </div>
           </Link>
         </li>
         <li className="mb-4 transition duration-300 ease-in-out transform hover:scale-105">
-          <Link href="/new-sales-invoice">
-            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/new-sales-invoice') && 'text-black bg-white'}`}>
+          <Link href="/accounts/new-sales-invoice">
+            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/accounts/new-sales-invoice') && 'text-black bg-white'}`}>
               <FaReceipt className="mr-3" />
               <span className="text-lg">New Sales Invoice</span>
             </div>
           </Link>
         </li>
         <li className="mb-4 transition duration-300 ease-in-out transform hover:scale-105">
-          <Link href="/customers">
-            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/customers') && 'text-black bg-white'}`}>
+          <Link href="/accounts/customers">
+            <div className={`flex items-center p-2 rounded-md bg-[#ebebeb33] ${isCurrentPage('/accounts/customers') && 'text-black bg-white'}`}>
               <FaUsers className="mr-3" />
               <span className="text-lg">Customers</span>
             </div>

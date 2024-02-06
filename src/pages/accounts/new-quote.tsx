@@ -1,4 +1,4 @@
-import Sidebar from '../components/SideBar'
+import Sidebar from '@/Components/acc/SideBar'
 import React from 'react'
 
 const NewQuote = () => {
@@ -6,7 +6,7 @@ const NewQuote = () => {
     <>
    <div className="flex">
       <Sidebar />
-      <div className="w-5/6 p-4">
+      <div className="w-5/6 p-4 bg-white">
         <h1>Quote</h1>
         <div>Main Content</div>
       </div>
