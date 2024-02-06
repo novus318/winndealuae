@@ -6,7 +6,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Add your login logic here
+
     console.log(`Logging in with Username: ${username} and Password: ${password}`);
   };
 
