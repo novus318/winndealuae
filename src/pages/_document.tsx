@@ -28,7 +28,7 @@ export default function Document() {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/title.svg"
+          href="/titlew.png"
         />
 
       <body>
