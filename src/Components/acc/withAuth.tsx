@@ -2,6 +2,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Spinner from './Spinner';
+import axios from 'axios';
 
 export function withAuth(Component: React.ComponentType) {
   return function AuthenticatedComponent(props: any) {
@@ -9,33 +10,43 @@ export function withAuth(Component: React.ComponentType) {
     const [ok, setOk] = useState<boolean | null>(null);
 
     useEffect(() => {
-      const authCheck = async () => {
+      const checkAuth = async () => {
+        // Get token from local storage
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+          setOk(false);
+          return;
+        }
+
         try {
-          const userFromLocalStorage = localStorage.getItem('user');
+          // Send token to backend for verification using Axios
+          const response = await axios.post(
+            `${process.env.NEXT_PUBLIC_API_URL}/api/auth/verify`,
+            {},
+            {
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
 
-          if (!userFromLocalStorage) {
-
-            router.push('/login');
-            return;
-          }
-
-          const user = JSON.parse(userFromLocalStorage);
-          if (user.user.role === 0) {
-            router.push('/');
-          } else if (user.user.role === 1) {
-            setOk(true); 
+          if (response.status === 200) {
+            // Token is valid
+            setOk(true);
           } else {
-  
-            router.push('/login');
+            // Token is invalid
+            setOk(false);
           }
         } catch (error) {
-          console.log(error);
+          // Handle network or other errors
+          console.error('Error during token verification:', error);
           setOk(false);
         }
       };
-      setOk(null);
 
-      authCheck();
+      checkAuth();
     }, [router]);
 
     if (ok === null) {
@@ -43,7 +54,7 @@ export function withAuth(Component: React.ComponentType) {
     }
 
     if (typeof window === 'undefined' || ok === false) {
-      router.push('/login');
+      router.push('/accounts/login');
       return null;
     }
 

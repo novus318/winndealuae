@@ -1,8 +1,9 @@
 import Layout from '@/Components/acc/Layout'
 import Sidebar from '@/Components/acc/SideBar'
+import { withAuth } from '@/Components/acc/withAuth'
 import React from 'react'
 
-const Customers = () => {
+const Customers :React.FC = () => {
   return (
     <>
     <Layout
@@ -20,4 +21,4 @@ const Customers = () => {
   )
 }
 
-export default Customers
+export default withAuth(Customers);

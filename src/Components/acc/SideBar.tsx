@@ -1,7 +1,6 @@
-
 import React from 'react';
 import Link from 'next/link';
-import { FaHome, FaFileAlt, FaReceipt, FaUsers } from 'react-icons/fa';
+import { FaHome, FaFileAlt, FaReceipt, FaUsers, FaSignOutAlt } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 
 const Sidebar: React.FC = () => {
@@ -11,17 +10,36 @@ const Sidebar: React.FC = () => {
     return router.pathname === path;
   };
 
+  const handleLogout = () => {
+    // Clear token and username from local storage
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+
+    // Redirect to the login page
+    router.push('/accounts/login');
+  };
+
   return (
     <div className="bg-black text-white h-screen w-1/6 p-4">
-            <Link href="/accounts/dashboard">
-      <div className="flex px-4 py-2 mb-2">
-        <img
-          src="https://www.winndeal.com/_next/static/media/logo-w.0662c99e.svg"
-          alt="logo"
-          className="h-14 w-auto"
-        />
-      </div>
+      <div className="flex">
+      <Link href="/accounts/dashboard">
+        <div className="flex items-center justify-center px-4 mb-4">
+          <img
+            src="https://www.winndeal.com/_next/static/media/logo-w.0662c99e.svg"
+            alt="logo"
+            className="h-10 w-auto"
+          />
+        </div>
       </Link>
+     <div>
+     <button
+          onClick={handleLogout}
+          className="flex items-center p-2 rounded-md bg-[#ebebeb33] hover:bg-white hover:text-black transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          <FaSignOutAlt className="mr-1" />
+        </button>
+     </div>
+      </div>
       <ul>
         <li className="mb-4 transition duration-300 ease-in-out transform hover:scale-105">
           <Link href="/accounts/dashboard">
