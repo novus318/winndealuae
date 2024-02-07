@@ -7,11 +7,11 @@ import axios from 'axios';
 export function withAuth(Component: React.ComponentType) {
   return function AuthenticatedComponent(props: any) {
     const router = useRouter();
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     const [ok, setOk] = useState<boolean | null>(null);
 
     useEffect(() => {
       const checkAuth = async () => {
-        // Get token from local storage
         const token = localStorage.getItem('token');
 
         if (!token) {
@@ -20,9 +20,8 @@ export function withAuth(Component: React.ComponentType) {
         }
 
         try {
-          // Send token to backend for verification using Axios
           const response = await axios.post(
-            `${process.env.NEXT_PUBLIC_API_URL}/api/auth/verify`,
+            `${apiUrl}/api/auth/verify`,
             {},
             {
               headers: {
@@ -33,14 +32,11 @@ export function withAuth(Component: React.ComponentType) {
           );
 
           if (response.status === 200) {
-            // Token is valid
             setOk(true);
           } else {
-            // Token is invalid
             setOk(false);
           }
         } catch (error) {
-          // Handle network or other errors
           console.error('Error during token verification:', error);
           setOk(false);
         }
