@@ -30,7 +30,7 @@ const LazyVideo: React.FC<LazyVideoProps> = ({ src }) => {
     }
   }, [src]);
 
-  return <video ref={videoRef} autoPlay loop muted controls={false} playsInline className="object-cover w-full h-full" />;
+  return <video preload='auto' ref={videoRef} autoPlay loop muted controls={false} playsInline className="object-cover w-full h-full" />;
 };
 
 export default LazyVideo;
