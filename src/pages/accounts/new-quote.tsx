@@ -1,6 +1,6 @@
-import Layout from '@/Components/acc/Layout';
-import Sidebar from '@/Components/acc/SideBar';
-import { withAuth } from '@/Components/acc/withAuth';
+import Layout from '@/components/acc/Layout';
+import Sidebar from '@/components/acc/SideBar';
+import { withAuth } from '@/components/acc/withAuth';
 import React, { useState } from 'react';
 
 const NewQuote: React.FC = () => {

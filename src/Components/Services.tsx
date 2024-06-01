@@ -126,8 +126,8 @@ const Services = () => {
 
       <Slider {...sliderSettings}>
       {serviceList.map((service, index) => (
-          <div key={index} className={`service-card px-4 service-card-${index}`}>
-            <div className="bg-[#fff] bg-opacity-25 rounded-3xl shadow-md p-6">
+          <div key={index} className={` px-4 service-card-${index}`}>
+            <div className="bg-[#fff] bg-opacity-25 rounded-3xl shadow-md p-6 service-card">
               <img
                 src={service.image.src}
                 alt={service.name}

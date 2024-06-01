@@ -85,7 +85,7 @@ const Mission = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-8 px-4 lg:px-24 text-white apple overflow-x-hidden">
+    <section ref={sectionRef} className="py-8 px-4  lg:px-24 text-white apple overflow-x-hidden" style={{ backgroundImage: 'url(/b1.svg)', backgroundSize: 'cover', backgroundPosition: 'center', }}>
   <div className="max-w-4xl mx-auto text-center">
     <h2 className="animate-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
       Our Mission & Vision

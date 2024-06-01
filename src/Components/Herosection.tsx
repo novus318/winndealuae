@@ -3,9 +3,9 @@ import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import gsap from 'gsap';
+import BackgroundVideo from 'next-video/background-video';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-const LazyVideo = lazy(() => import('./Lazyvideo'));
+import { TextGenerateEffect } from './ui/text-generate-effect';
 
 gsap.registerPlugin(ScrollTrigger);
 const Herosection = () => {
@@ -14,13 +14,6 @@ const Herosection = () => {
   const [selectedSlide, setSelectedSlide] = useState(0);
 
   const sliders = [
-    {
-      video: '/ban1.mp4',
-      main: 'Elevate Your Gaming Experience.',
-      sub: 'Immersive Gaming Solutions Tailored for Victory',
-      para: 'Elevate your gaming experience with our cutting-edge solutions, where precision, power, and cutting-edge technology converge to redefine the possibilities of digital gaming.',
-      cta: 'Learn More',
-    },
     {
       video: '/ban2.mp4',
       main: 'Transforming Retail, Empowering E-commerce',
@@ -84,31 +77,26 @@ const Herosection = () => {
       <Carousel showArrows={false} showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={5000} swipeable={false}>
         {sliders.map((slider, index) => (
           <div key={index} className="relative h-screen overflow-x-hidden">
-                   {slider.video && (
-                <Suspense fallback={<div>Loading...</div>}>
-                  <LazyVideo src={slider.video} />
-                </Suspense>
-            )}
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10 text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-text">
-                <span className="hollow-text text-shadow">{slider.main}</span>
-              </h1>
-              <h2 className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold mb-4 netflix animate-textb">
-                {slider.sub}
-              </h2>
-              {learnMoreClicked && selectedSlide === index ? (
-                <div ref={contentRef} className="animate-fade-in">
-                  <p className="text-xs md:text-sm lg:text-base xl:text-lg  text-white">
-                    {slider.para}
-                  </p>
-                </div>
-              ) : (
-                <button onClick={() => handleLearnMoreClick(index)} className="cta-button mt-6 px-8 py-2 border border-white rounded-full hover:bg-white hover:text-black transition duration-300 ease-in-out animate-cta">
-                  {slider.cta}
-                </button>
-              )}
-            </div>
+            <BackgroundVideo src={slider.video}>
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black via-transparent to-black opacity-0"></div>
+              <div className="text-white z-10 text-center">
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 animate-text" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.6)' }}>
+                  <span className="hollow-text">{slider.main}</span>
+                </h1>
+                <TextGenerateEffect words={slider.sub} />
+                {learnMoreClicked && selectedSlide === index ? (
+                  <div ref={contentRef} className="animate-fade-in">
+                    <p className="text-sm md:text-lg lg:text-xl xl:text-2xl text-white">
+                      {slider.para}
+                    </p>
+                  </div>
+                ) : (
+                  <button onClick={() => handleLearnMoreClick(index)} className="cta-button mt-6 px-10 py-3 border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-500 ease-in-out animate-cta" style={{ boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
+                    {slider.cta}
+                  </button>
+                )}
+              </div>
+            </BackgroundVideo>
           </div>
         ))}
       </Carousel>

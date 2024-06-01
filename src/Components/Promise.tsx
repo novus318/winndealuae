@@ -76,12 +76,10 @@ const Promise = () => {
 
   return (
     <div
-      ref={promiseRef}
-      className={`bg-[#fffffff6] py-16 px-4 md:px-8 text-black relative transition-transform duration-500 rounded-b-[5em] mx-4 mb-5 ${
-        animate ? 'transform translate-y-0 opacity-100' : 'transform translate-y-12 opacity-0'
-      }`}
+      className={`bg-[#fffffff6] py-16 px-4 md:px-8 text-black relative transition-transform duration-500 rounded-b-[5em] mx-4 mb-5`}
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+      <div
+       ref={promiseRef} className="container mx-auto flex flex-col md:flex-row items-center justify-center">
         <div
           ref={textRef}
           className={`promise-content text-center md:w-1/2 p-8 md:p-16 ${

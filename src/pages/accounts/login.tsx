@@ -1,4 +1,4 @@
-import Layout from '@/Components/acc/Layout';
+import Layout from '@/components/acc/Layout';
 import React, { useState } from 'react';
 import axios from 'axios';
 

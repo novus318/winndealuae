@@ -2,11 +2,10 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-import Footer from '@/Components/Footer';
-import Header from '@/Components/Header';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import { FaCheckCircle, FaHandshake, FaUsers } from 'react-icons/fa';
-import AboutImage from '@/images/about.webp';
-import Layout from '@/Components/Layout';
+import Layout from '@/components/Layout';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +17,7 @@ const About: React.FC = () => {
     elements.forEach((element: Element) => {
       gsap.from(element, {
         opacity: 0,
-        y: 50,
+        y: 50,  
         duration: 1,
         scrollTrigger: {
           trigger: element,
@@ -56,19 +55,12 @@ const About: React.FC = () => {
       <>
       <Header />
       <section className="py-10 mt-14">
-        <div className="container mx-auto p-8 apple">
+        <div className="container mx-auto p-8 apple max-w-7xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white mb-4 md:mb-8 text-center animate-fade-in">
             About Us
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
-            <div className="animate-fade-in">
-              <img
-                src={AboutImage.src}
-                alt="About Winndeal"
-                className="w-full filter grayscale-[30%] "
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-8 items-center">
             <div className="animate-fade-in">
               <p className="text-base md:text-lg lg:text-xl font-semibold text-white mb-2 md:mb-4">
                 Welcome to Winndeal - Your Trusted IT Solutions Provider in the UAE

@@ -33,7 +33,7 @@ const ContactIcons = () => {
             <FaInstagram className="w-7 h-7" />
           </a>
           <a
-            href="https://www.facebook.com/profile.php?id=100093622394715"
+            href="https://www.facebook.com/people/Winndeal/61559793615336/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white text-black"

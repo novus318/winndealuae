@@ -48,7 +48,7 @@ const Highlights = () => {
   }, []);
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center py-16 px-5 service-card">
+    <section className="flex flex-col lg:flex-row items-center justify-center py-16 px-8 md:px-32 service-card">
       <div className="text-white text-center lg:text-left lg:w-1/2">
         <h2 className="text-3xl lg:text-5xl font-bold mb-4 highlight-title-0">
           Crafting<br />

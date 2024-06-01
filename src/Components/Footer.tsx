@@ -30,7 +30,7 @@ const Footer = () => {
             <a href="https://wa.me/+971563017029" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
               <FaWhatsapp />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100093622394715" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
+            <a href="https://www.facebook.com/people/Winndeal/61559793615336/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
               <FaFacebook />
             </a>
             <a href="https://www.linkedin.com/company/winndeal/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFEE7F]">
