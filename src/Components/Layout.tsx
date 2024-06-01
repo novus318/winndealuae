@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import ScrollUp from '@/components/ScrollUp'
+import ScrollUp from '../components/ScrollUp'
 import ContactIcons from './ContactIcons';
 interface LayoutProps {
   children: React.ReactNode;
