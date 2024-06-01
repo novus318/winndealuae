@@ -1,14 +1,15 @@
+import Card from '@/components/Card';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Herosection from '@/components/Herosection';
+import Highlights from '@/components/Highlights';
+import Layout from '@/components/Layout';
+import Mission from '@/components/Mission';
+import Promise from '@/components/Promise';
+import Services from '@/components/Services';
+import { HeroParallax } from '@/components/ui/hero-parallax';
 import React, { useEffect } from 'react';
-import Layout from '../components/Layout';
-import Card from '../components/Card';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Herosection from '../components/Herosection';
-import Promise from '../components/Promise';
-import Mission from '../components/Mission';
-import Services from '../components/Services';
-import Highlights from '../components/Highlights';
-import { HeroParallax } from '../components/ui/hero-parallax';
+
 
 
 export default function Home() {

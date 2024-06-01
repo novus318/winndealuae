@@ -1,14 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Layout from '../components/Layout';
-import Products from '../components/Products';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Services from '../components/Services';
-import Brands from '../components/Brands';
+import Layout from '@/components/Layout';
+import Header from '@/components/Header';
+import Services from '@/components/Services';
+import Brands from '@/components/Brands';
+import Products from '@/components/Products';
+import Footer from '@/components/Footer';
+
 
 gsap.registerPlugin(ScrollTrigger);
 const ProductServices = () => {

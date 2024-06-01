@@ -1,19 +1,61 @@
 import React, { useEffect } from 'react';
-import Layout from '../../components/Layout';
-import Brands from '../../components/Brands';
-import Card from '../../components/Card';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import Herosection from '../../components/Herosection';
-import Promise from '../../components/Promise';
-import Mission from '../../components/Mission';
-import Services from '../../components/Services';
-import Highlights from '../../components/Highlights';
-import Highlight2 from '../../components/Highlight2';
+
 import { useRouter } from 'next/router';
+import Layout from '@/components/Layout';
+import Header from '@/components/Header';
+import Herosection from '@/components/Herosection';
+import Promise from '@/components/Promise';
+import Mission from '@/components/Mission';
+import Highlights from '@/components/Highlights';
+import Services from '@/components/Services';
+import { HeroParallax } from '@/components/ui/hero-parallax';
+import Card from '@/components/Card';
+import Footer from '@/components/Footer';
 
 
 export default function Home() {
+  const products = [
+    {
+      title: "Tl Online shop",
+      link: "https://tlonline.shop",
+      thumbnail:
+        "/banner/1.webp",
+    },
+    {
+      title: "Abyzplants",
+      link: "https://abyzplants.com",
+      thumbnail:
+        "/banner/2.webp",
+    },
+    {
+      title: "Austagreg",
+      link: "https://austagreg.vercel.app",
+      thumbnail:
+        "/banner/3.webp",
+    },
+   
+    {
+      title: "Amisaero",
+      link: "https://amisaero.com/",
+      thumbnail:
+        "/banner/4.webp",
+    },
+    {
+      title: "Confident",
+      link: "https://confidentuae.com/",
+      thumbnail:
+        "/banner/5.webp",
+    },
+    {
+      title: "Tt-gulf",
+      link: "https://www.tt-gulf.com/",
+      thumbnail:
+        "/banner/6.webp",
+    },
+   
+   
+  
+  ];
     const router = useRouter();
     const { pid } = router.query;
   useEffect(() => {
@@ -38,7 +80,7 @@ export default function Home() {
       <Mission/>
       <Highlights/>
       <Services/>
-      <Highlight2/>
+      <HeroParallax products={products} />
       <Card />
       <Footer />
     </Layout></>
