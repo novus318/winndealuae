@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { FaCheckCircle, FaHandshake, FaUsers } from 'react-icons/fa';
 import Layout from '../components/Layout';
+import Footer from '@/components/Footer';
 
 
 gsap.registerPlugin(ScrollTrigger);
