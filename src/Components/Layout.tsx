@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import ScrollUp from '../components/ScrollUp'
 import ContactIcons from './ContactIcons';
+import ScrollToTop from './ScrollUp';
 interface LayoutProps {
   children: React.ReactNode;
   title: string;
@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({
         <title>{title}</title>
       </Helmet>
       {children}
-      <ScrollUp/>
+      <ScrollToTop/>
       <ContactIcons/>
     </div>
   );
