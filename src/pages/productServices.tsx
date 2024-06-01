@@ -4,12 +4,12 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Layout from '@/components/Layout';
-import Header from '@/components/Header';
-import Services from '@/components/Services';
-import Brands from '@/components/Brands';
-import Products from '@/components/Products';
-import Footer from '@/components/Footer';
+import Layout from '@/Components/Layout';
+import Header from '@/Components/Header';
+import Services from '@/Components/Services';
+import Brands from '@/Components/Brands';
+import Products from '@/Components/Products';
+import Footer from '@/Components/Footer';
 
 
 gsap.registerPlugin(ScrollTrigger);

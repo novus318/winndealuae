@@ -4,9 +4,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import { FaCheckCircle, FaHandshake, FaUsers } from 'react-icons/fa';
 
-import Footer from '@/components/Footer';
-import Layout from '@/components/Layout';
-import Header from '@/components/Header';
+import Footer from '@/Components/Footer';
+import Layout from '@/Components/Layout';
+import Header from '@/Components/Header';
 
 
 gsap.registerPlugin(ScrollTrigger);

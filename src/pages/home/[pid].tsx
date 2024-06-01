@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 
 import { useRouter } from 'next/router';
-import Layout from '@/components/Layout';
-import Header from '@/components/Header';
-import Herosection from '@/components/Herosection';
-import Promise from '@/components/Promise';
-import Mission from '@/components/Mission';
-import Highlights from '@/components/Highlights';
-import Services from '@/components/Services';
-import { HeroParallax } from '@/components/ui/hero-parallax';
-import Card from '@/components/Card';
-import Footer from '@/components/Footer';
+import Layout from '@/Components/Layout';
+import Header from '@/Components/Header';
+import Herosection from '@/Components/Herosection';
+import Promise from '@/Components/Promise';
+import Mission from '@/Components/Mission';
+import Highlights from '@/Components/Highlights';
+import Services from '@/Components/Services';
+import { HeroParallax } from '@/Components/ui/hero-parallax';
+import Card from '@/Components/Card';
+import Footer from '@/Components/Footer';
 
 
 export default function Home() {

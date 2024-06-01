@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Sidebar from '@/components/acc/SideBar'
-import Layout from "@/components/acc/Layout";
-import { withAuth } from "@/components/acc/withAuth";
+import Sidebar from '@/Components/acc/SideBar'
+import Layout from "@/Components/acc/Layout";
+import { withAuth } from "@/Components/acc/withAuth";
 
 const inter = Inter({ subsets: ["latin"] });
 
