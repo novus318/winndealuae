@@ -5,7 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import gsap from 'gsap';
 import BackgroundVideo from 'next-video/background-video';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { TextGenerateEffect } from './ui/text-generate-effect';
+import { TextGenerateEffect } from '@/Components/ui/text-generate-effect';
 
 gsap.registerPlugin(ScrollTrigger);
 const Herosection = () => {
@@ -78,9 +78,9 @@ const Herosection = () => {
         {sliders.map((slider, index) => (
           <div key={index} className="relative h-screen overflow-x-hidden">
             <BackgroundVideo src={slider.video}>
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black via-transparent to-black opacity-0"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
               <div className="text-white z-10 text-center">
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 animate-text" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.6)' }}>
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-text" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.6)' }}>
                   <span className="hollow-text">{slider.main}</span>
                 </h1>
                 <TextGenerateEffect words={slider.sub} />
