@@ -15,6 +15,7 @@ const Herosection = () => {
 
   const sliders = [
     {
+      poster: '/ban2.jpg',
       video: '/ban2.mp4',
       main: 'Transforming Retail, Empowering E-commerce',
       sub: 'Crafting Seamless Online Shopping Experiences',
@@ -22,6 +23,7 @@ const Herosection = () => {
       cta: 'Discover More',
     },
     {
+      poster: '/ban3.jpg',
       video: '/ban3.mp4',
       main: 'Digital Excellence Redefined',
       sub: 'Innovative Web Solutions for Your Unique Needs',
@@ -29,6 +31,7 @@ const Herosection = () => {
       cta: 'Explore Now',
     },
     {
+      poster: '/ban4.jpg',
       video: '/ban4.mp4',
       main: 'Next-Level Gaming Setups',
       sub: 'Unleash Your Potential with Our Gaming Solutions',
@@ -77,7 +80,7 @@ const Herosection = () => {
       <Carousel showArrows={false} showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={5000} swipeable={false}>
         {sliders.map((slider, index) => (
           <div key={index} className="relative h-screen overflow-x-hidden">
-            <BackgroundVideo src={slider.video}>
+            <BackgroundVideo src={slider.video} poster={slider.poster}>
               <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
               <div className="text-white z-10 text-center">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-text" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.6)' }}>
