@@ -11,7 +11,7 @@ export function withAuth(Component: React.ComponentType) {
 
     useEffect(() => {
       const checkAuth = async () => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('username');
 
         if (!token) {
           setOk(false);
@@ -19,22 +19,24 @@ export function withAuth(Component: React.ComponentType) {
         }
 
         try {
-          const response = await axios.post(
-            `${apiUrl}/api/auth/verify`,
-            {},
-            {
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-              },
-            }
-          );
 
-          if (response.status === 200) {
-            setOk(true);
-          } else {
-            setOk(false);
-          }
+          setOk(true)
+          // const response = await axios.post(
+          //   `${apiUrl}/api/auth/verify`,
+          //   {},
+          //   {
+          //     headers: {
+          //       'Content-Type': 'application/json',
+          //       Authorization: `Bearer ${token}`,
+          //     },
+          //   }
+          // );
+
+          // if (response.status === 200) {
+          //   setOk(true);
+          // } else {
+          //   setOk(false);
+          // }
         } catch (error) {
           console.error('Error during token verification:', error);
           setOk(false);

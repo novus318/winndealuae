@@ -9,29 +9,39 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = async () => {
-    try {
-      const response = await axios.post(`${apiUrl}/api/auth/login`, {
-        username,
-        password,
-      });
+    // try {
+    //   const response = await axios.post(`${apiUrl}/api/auth/login`, {
+    //     username,
+    //     password,
+    //   });
 
-      if (response.status === 200) {
-        // Save token and username in local storage
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('username', response.data.user.username);
+    //   if (response.status === 200) {
+    //     // Save token and username in local storage
+    //     localStorage.setItem('token', response.data.token);
+    //     localStorage.setItem('username', response.data.user.username);
 
-        // Redirect to /accounts/dashboard
-        window.location.href = '/accounts/dashboard';
-      } else {
-        // Handle errors or unsuccessful login
-        setErrorMessage('Login failed. Please check your credentials.');
-      }
-    } catch (error) {
-      // Handle network or other errors
-      console.error('Error during login:', error);
-      setErrorMessage('An error occurred. Please try again later.');
-    }
+    //     // Redirect to /accounts/dashboard
+    //     window.location.href = '/accounts/dashboard';
+    //   } else {
+    //     // Handle errors or unsuccessful login
+    //     setErrorMessage('Login failed. Please check your credentials.');
+    //   }
+    // } catch (error) {
+    //   // Handle network or other errors
+    //   console.error('Error during login:', error);
+    //   setErrorMessage('An error occurred. Please try again later.');
+    // }
+    const validateName = 'winndeal'
+    const validatePassword = 'winn2Deal'
+    if (username === validateName && password === validatePassword) {
+      localStorage.setItem('username', validateName);
+
+      // Redirect to /accounts/dashboard
+      window.location.href = '/accounts'
+    } else {
+      setErrorMessage('Login failed. Please check your credentials.');
   };
+}
 
   return (
     <Layout title="WINNDEAL | Accounts">
